@@ -54,7 +54,37 @@
                 </div>
             </div>
         </div>
-        
+      <!-- Withdrawal Modal -->
+<div class="modal" id="withdraw-modal">
+  <div class="modal-content">
+    <h3>Withdraw Funds</h3>
+    <div class="quick-amounts" style="display: flex; gap: 10px; margin-bottom: 15px;">
+      <button class="amount-btn" data-amount="20">$20</button>
+      <button class="amount-btn" data-amount="50">$50</button>
+      <button class="amount-btn" data-amount="100">$100</button>
+      <button class="amount-btn" data-amount="200">$200</button>
+    </div>
+    <div class="form-group">
+      <label for="withdraw-amount">Amount (Even amounts):</label>
+      <input type="number" id="withdraw-amount" placeholder="Enter amount" step="20" min="20">
+    </div>
+    <div class="form-group">
+      <label for="withdraw-method">Method:</label>
+      <select id="withdraw-method" class="form-control">
+        <option value="atm">ATM Withdrawal</option>
+        <option value="branch">Bank Branch</option>
+      </select>
+    </div>
+    <div class="modal-buttons">
+      <button class="modal-btn cancel-btn" id="cancel-withdraw">Cancel</button>
+      <button class="modal-btn confirm-btn" id="confirm-withdraw">Confirm Withdrawal</button>
+    </div>
+    <div class="loading" id="withdraw-loading">
+      <div class="spinner"></div>
+      <p>Processing withdrawal...</p>
+    </div>
+  </div>
+</div>  
         <!-- Deposit Modal -->
         <div class="modal" id="deposit-modal">
             <div class="modal-content">
