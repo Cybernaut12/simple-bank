@@ -229,6 +229,37 @@
     transition: background-color 0.3s;
     /* Remove position: absolute and related properties */
 }
+/* Add to your existing styles */
+.quick-amounts {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.amount-btn {
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.amount-btn:hover {
+  background: #e0e0e0;
+}
+
+.receipt {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border-top: 1px dashed #ddd;
+}
+
+.receipt h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
