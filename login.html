@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="./css/login-style.css">
+</head>
+<body>
+<div class="wrapper">
+<form id="loginForm" action="index.html" method="GET">
+<h1>Login</h1>
+<div class="input-box">
+<input type="text" name="username" id="username" placeholder="Username" required>
+<i class='bx bxs-user'></i>
+</div>
+<div class="input-box">
+<input type="password" name="password" id="password" placeholder="Password" required>
+<i class='bx bxs-lock-alt'></i>
+</div>
+<div class="remember-forgot">
+<label><input type="checkbox">Remember me</label>
+<a href="#">Forgot password?</a>
+</div>
+<button type="submit" class="btn">Login</button>
+<div class="register-link">
+<p>Don't have an account? <a href="#">Register</a></p>
+</div>
+</form>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    // Get the username input value
+    const username = document.getElementById('username').value.trim();
+    
+    // Basic validation
+    if(username === '') {
+        e.preventDefault();
+        alert('Please enter a username');
+        return;
+    }
+    
+    // The form will automatically submit with the username as a URL parameter
+    // because we're using GET method and the input has name="username"
+});
+</script>
+</body>
+</html>

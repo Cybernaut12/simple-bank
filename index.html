@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumTrust Bank Dashboard</title>
+    <link rel="stylesheet" href="./css/index-style.css">
+</head>
+<body>
+    <div class="bank-header">
+        <h1>QuantumTrust Bank</h1>
+        <p>Secure. Reliable. Future-ready banking.</p>
+    </div>
+    
+    <div class="dashboard">        
+        <div class="header">
+            <div class="user-info">
+                <h2>Welcome, <span id="username">User</span></h2>
+            </div>
+            <div class="balance">
+                Balance: $<span id="account-balance">1000</span>
+            </div>
+            <button class="logout-btn" id="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+        </div>
+        
+        <!-- Rest of your HTML remains the same -->
+        <div class="actions">
+            <button class="action-btn" id="transfer-btn">Transfer</button>
+            <button class="action-btn" id="withdraw-btn">Withdraw</button>
+            <button class="action-btn" id="deposit-btn">Deposit</button>
+        </div>
+        
+        <!-- Transfer Modal -->
+        <div class="modal" id="transfer-modal">
+            <div class="modal-content">
+                <h3>Transfer Money</h3>
+                <div class="form-group">
+                    <label for="transfer-amount">Amount</label>
+                    <input type="number" id="transfer-amount" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label for="transfer-account">Recipient name</label>
+                    <input type="text" id="transfer-account" placeholder="Enter name">
+                </div>
+                <div class="modal-buttons">
+                    <button class="modal-btn cancel-btn" id="cancel-transfer">Cancel</button>
+                    <button class="modal-btn confirm-btn" id="confirm-transfer">Transfer</button>
+                </div>
+                <div class="loading" id="transfer-loading">
+                    <div class="spinner"></div>
+                    <p>Processing transfer...</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Deposit Modal -->
+        <div class="modal" id="deposit-modal">
+            <div class="modal-content">
+                <h2>Deposit Money</h2>
+                <h4>Deposit to this account</h4>
+                <p><strong>Account Number:</strong> <span id="account-number">7043045820</span></p>
+                <p><strong>Account name:</strong> <span id="account-holder">Victor Ajisola</span></p>
+                <p>OPAY</p>
+                <div class="form-group">
+                    <label for="deposit-amount">Amount:</label>
+                    <input type="number" id="deposit-amount" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label for="deposit-source">From (Source):</label>
+                    <input type="text" id="deposit-source" placeholder="e.g. Bank Transfer, OPay, etc.">
+                </div>
+                <div class="modal-buttons">
+                    <button class="modal-btn cancel-btn" id="cancel-deposit">Cancel</button>
+                    <button class="modal-btn confirm-btn" id="confirm-deposit">Confirm Deposit</button>
+                </div>
+                <div class="loading" id="deposit-loading">
+                    <div class="spinner"></div>
+                    <p>Processing deposit...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="transaction-history">
+            <h3>Transaction History</h3>
+            <div class="transactions-list" id="transactions-list">
+                <!-- Transactions will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+   <script src="./script.js"></script>
+</body>
+</html>
